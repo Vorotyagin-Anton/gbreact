@@ -1,17 +1,33 @@
 import './App.css';
-import Message from './Message';
+import React, { useState, useEffect } from "react";
+import InputField from "./InputField";
+import MessagesList from "./MessagesList";
 
-const messageToRender = 'My message in new component';
+function App() {
+  const [ messagesList, setMessagesList] = useState([]);
 
-function App(props) {
+  const changeMessagesList = (author = 'userName', text = 'emptyMessage') => {
+      setMessagesList(
+          prevList => [...prevList, {author: author, text: text}]
+      )
+  }
+
+  useEffect(
+      () => {
+          let lastMessage = messagesList[messagesList.length - 1];
+          if (lastMessage && lastMessage.author !== 'robot') {
+              setTimeout(() => changeMessagesList('robot', 'robot answer'), 1500);
+          }
+      },
+      [messagesList]
+  );
+
   return (
-      <div className="App">
-        <header className="App-header">
-          My First React App
-          <h3>Hello, { props.name }!</h3>
-            My message component
-            <Message message={messageToRender}/>
-        </header>
+      <div>
+          <div className='messagesBox'>
+              <MessagesList messageslist={messagesList} />
+          </div>
+          <InputField changeMessagesList={changeMessagesList} />
       </div>
   );
 }
