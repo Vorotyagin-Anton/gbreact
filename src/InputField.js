@@ -1,4 +1,7 @@
-import {useState} from "react";
+import {useState, useRef, useEffect} from "react";
+import Button from '@material-ui/core/Button';
+import SendIcon from '@material-ui/icons/Send';
+import TextField from '@material-ui/core/TextField';
 
 import './InputField.sass';
 
@@ -7,20 +10,24 @@ function InputField(props) {
 
     return (
         <div className='inputForm'>
-            <input
+            <TextField
+                id="outlined-textarea"
+                label="Type your message here"
+                multiline
+                variant="outlined"
                 className='inputForm__textarea'
                 value={inputText}
                 onChange={(e) => setInputText(e.target.value)}
-                style={{
-                    color: "red",
-                }}
             />
-            <input
+            <Button
+                variant="contained"
+                color="primary"
+                endIcon={<SendIcon />}
                 className='inputForm__button'
-                type="button"
                 onClick={() => {props.changeMessagesList('user1', inputText); setInputText('')}}
-                value='Send Message'
-            />
+            >
+                Send Message
+            </Button>
         </div>
     );
 }
