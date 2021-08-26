@@ -1,9 +1,10 @@
 .container {
-  height: 100vh;
   width: 100vw;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .mainContent {
@@ -17,8 +18,7 @@
 
 .messagesBox {
   width: 400px;
-  min-height: 150px;
-  max-height: 400px;
+  height: 400px;
   overflow: scroll;
   margin: 10px 0;
   outline: 1px solid slategray;

@@ -3,7 +3,7 @@ import Button from '@material-ui/core/Button';
 import SendIcon from '@material-ui/icons/Send';
 import TextField from '@material-ui/core/TextField';
 
-import './InputField.sass';
+import '../../css/InputField.sass';
 
 function InputField(props) {
     const [ inputText, setInputText ] = useState('');

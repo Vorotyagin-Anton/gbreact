@@ -1,4 +1,5 @@
 import { makeStyles, createStyles } from "@material-ui/core/styles";
+import { useParams } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => createStyles({
     messageInList: {
@@ -10,13 +11,21 @@ const useStyles = makeStyles((theme) => createStyles({
 }));
 
 function MessagesList(props) {
+    const { chatId } = useParams();
     const classes = useStyles(props);
+
     return (
         props.messageslist.map(
-            (message, index) =>
-                <div key={index} className={classes.messageInList}>
-                    {message.author}: {message.text}
-                </div>
+            (message, index) => {
+                if (message.chatId === chatId) {
+                    return <div key={index} className={classes.messageInList}>
+                        {message.author}: {message.text}
+                    </div>
+                }
+                else {
+                    return null;
+                }
+            }
         )
     );
 }
