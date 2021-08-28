@@ -1,4 +1,4 @@
-import '../../css/Chats.css';
+import '../../../css/Chats.css';
 
 import React, { useState, useEffect } from "react";
 import { useParams, Redirect } from "react-router-dom";
