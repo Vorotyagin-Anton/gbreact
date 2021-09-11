@@ -9,9 +9,9 @@ import {
 } from "react-router-dom";
 
 // Pages
-import Chats from './js/Chats/Chats';
-import Home from "./js/Home/Home";
-import Profile from "./js/Profile/Profile";
+import Chats from './js/components/Chats/Chats';
+import Home from "./js/components/Home/Home";
+import Profile from "./js/components/Profile/Profile";
 
 // Header
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';

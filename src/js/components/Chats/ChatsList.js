@@ -4,7 +4,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import {Link} from "react-router-dom";
 import React from "react";
 
-import '../../css/ChatsList.sass';
+import '../../../css/ChatsList.sass';
 
 function ChatsList(props) {
     const chatsList = props.chatsList.map(
