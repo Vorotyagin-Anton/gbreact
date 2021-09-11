@@ -1,8 +1,12 @@
-import './App.css';
+import '../../../css/Chats.css';
+
 import React, { useState, useEffect } from "react";
+import { useParams, Redirect } from "react-router-dom";
+
 import InputField from "./InputField";
 import MessagesList from "./MessagesList";
 import ChatsList from "./ChatsList";
+
 import {
     ThemeProvider,
     createTheme,
@@ -19,14 +23,15 @@ const theme = createTheme({
     },
 });
 
-function App() {
+function Chats() {
   const [ messagesList, setMessagesList] = useState([]);
-  const [ chatsList, setChatsList ] = useState([{id: 1, name: 'chat01'}, {id: 2, name: 'chat02'}]);
+  const [ chatsList, setChatsList ] = useState([{id: 1, name: 'chat_1'}, {id: 2, name: 'chat_2'}]);
+  const { chatId } = useParams();
 
   const changeMessagesList = (author = 'userName', text = 'emptyMessage') => {
       if (text.trim() !== '') {
           setMessagesList(
-              prevList => [...prevList, {author: author, text: text}]
+              prevList => [...prevList, {chatId: chatId, author: author, text: text}]
           )
       }
   }
@@ -46,7 +51,6 @@ function App() {
 
   return (
       <ThemeProvider theme={theme}>
-          <div className='container'>
               <div className="mainContent">
                   <ChatsList chatsList={chatsList} />
                   <div className='messagesBlock'>
@@ -56,9 +60,8 @@ function App() {
                       <InputField changeMessagesList={changeMessagesList} />
                   </div>
               </div>
-          </div>
       </ThemeProvider>
   );
 }
 
-export default App;
+export default Chats;
