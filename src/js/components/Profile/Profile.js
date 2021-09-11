@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { store, toggleShowName } from "../../store/profile";
+import { store, toggleShowNameMiddleware } from "../../store/profile";
 
 export default function Profile() {
     const [dummy, setDummy] = useState();
     const { showName, name } = store.getState();
 
     const setShowName = () => {
-        store.dispatch(toggleShowName());
+        store.dispatch(toggleShowNameMiddleware('test777'));
         setDummy({});
     }
 

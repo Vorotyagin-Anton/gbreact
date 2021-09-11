@@ -1,19 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29fbfb54-f2af-4118-a033-04e189b73bad" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/js/store/profile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Chats/Chats.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Chats/Chats.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Chats/ChatsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Chats/ChatsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Chats/InputField.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Chats/InputField.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Chats/MessagesList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Chats/MessagesList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Home/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/Profile/Profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/components/Profile/Profile.js" afterDir="false" />
-    </list>
+    <list default="true" id="29fbfb54-f2af-4118-a033-04e189b73bad" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
