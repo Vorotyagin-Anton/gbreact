@@ -12,6 +12,7 @@ import {
 import Chats from './js/components/Chats/Chats';
 import Home from "./js/components/Home/Home";
 import Profile from "./js/components/Profile/Profile";
+import Gists from "./js/components/Gists/Gists";
 
 // Header
 import Breadcrumbs from '@material-ui/core/Breadcrumbs';
@@ -23,6 +24,7 @@ export default function Routes() {
                 <Link to="/">Home</Link>
                 <Link to="/profile">Profile</Link>
                 <Link to="/chats">Chats</Link>
+                <Link to="/gists">Gists</Link>
             </Breadcrumbs>
 
             <Switch>
@@ -37,6 +39,10 @@ export default function Routes() {
 
                 <Route path="/chats/:chatId?">
                     <Chats />
+                </Route>
+
+                <Route path="/gists">
+                    <Gists />
                 </Route>
 
             </Switch>
